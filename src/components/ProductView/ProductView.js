@@ -30,7 +30,7 @@ function ProductView({ products }) {
             className="product-side-panel-toggle"
             onClick={() => setPokemon(!pokemon)}
           >
-            {pokemon ? ">" : "<"}
+            {pokemon ? ">" : "<"
           </div>
         </div>
         <ProductDetails visible={pokemon} product={batman} />
