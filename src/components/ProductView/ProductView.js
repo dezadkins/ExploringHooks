@@ -32,7 +32,7 @@ function ProductView({ products }) {
             {pokemon ? ">" : "<"}
           </div>
         </div>
-        <ProductDetails visible={pokemon} />
+        <ProductDetails visible={pokemon} product={batman} />
       </div>
     </div>
   );
