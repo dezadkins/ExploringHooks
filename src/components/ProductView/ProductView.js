@@ -6,7 +6,8 @@ import ProductDetails from "../ProductDetails";
 import "./ProductView.css";
 
 function ProductView({ products }) {
-  const [sideOpen, setSideOpen] = useState(true);
+  const [pokemon, setPokemon] = useState(true);
+  const [batman, setBatman] = useState();
 
   return (
     <div className="product-view">
@@ -17,7 +18,7 @@ function ProductView({ products }) {
             <ProductListItem
               key={item.id}
               product={item}
-              onClick={() => console.log("SELECT PRODUCT", item)}
+              onClick={() => setBatman(item)}
             />
           ))}
         </div>
@@ -26,12 +27,12 @@ function ProductView({ products }) {
         <div className="product-side-panel-toggle-wrapper">
           <div
             className="product-side-panel-toggle"
-            onClick={() => setSideOpen(!sideOpen)}
+            onClick={() => setPokemon(!pokemon)}
           >
-            {sideOpen ? ">" : "<"}
+            {pokemon ? ">" : "<"}
           </div>
         </div>
-        <ProductDetails visible={sideOpen} />
+        <ProductDetails visible={pokemon} />
       </div>
     </div>
   );
