@@ -18,6 +18,7 @@ function ProductView({ products }) {
             <ProductListItem
               key={item.id}
               product={item}
+              isSelected={batman && batman.id === item.id}
               onClick={() => setBatman(item)}
             />
           ))}
