@@ -67,7 +67,7 @@
   overflow: visible;
 }
 .product-list-item.selected {
-  background-color: lightcoral;
+  background-color: limegreen;
 }
 
 .product-list-item-photo {
